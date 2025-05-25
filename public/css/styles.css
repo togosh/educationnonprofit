@@ -98,7 +98,7 @@ header a:hover, header a.active {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, rgba(0, 64, 128, 0.8) 0%, rgba(0, 102, 204, 0.8) 100%), url('/images/banner.jpg') center/cover no-repeat;
+    background: url('/images/banner03.jpg') center/cover no-repeat;
     color: #fff;
     padding: 60px 0;
     text-align: center;
@@ -146,7 +146,7 @@ header a:hover, header a.active {
 }
 
 .page-hero {
-    background: linear-gradient(135deg, rgba(233, 236, 239, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%), url('/images/banner.jpg') center/cover no-repeat;
+    background: linear-gradient(135deg, rgba(233, 236, 239, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%), url('/images/banner03.jpg') center/cover no-repeat;
     padding: 30px 0;
     text-align: center;
     border-bottom: 1px solid #ddd;
