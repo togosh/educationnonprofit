@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Educational content
+Allow: /about
+Allow: /resources
+Allow: /contact
+Allow: /donate
+Allow: /disclaimer
+
+# Static assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Sitemaps
+Sitemap: https://dfeat.org/sitemap.xml
+
+# Social media bots
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /

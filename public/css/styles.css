@@ -1,0 +1,501 @@
+/* DFEAT Nonprofit Website Styles */
+/* Basic Reset & Body */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header & Nav */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: #0779e4 3px solid;
+}
+
+header nav .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Handle missing logo image gracefully */
+.logo[src=""]:after,
+.logo:not([src]):after {
+    content: "DFEAT";
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    background: #fff;
+    color: #004080;
+    padding: 0 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.org-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+header a:hover, header a.active {
+    color: #0779e4;
+    font-weight: bold;
+}
+
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(0, 64, 128, 0.8) 0%, rgba(0, 102, 204, 0.8) 100%), url('/images/banner.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #ff9900;
+    color: #333;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background: #e68a00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.page-hero {
+    background: linear-gradient(135deg, rgba(233, 236, 239, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%), url('/images/banner.jpg') center/cover no-repeat;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-hero h1 {
+    margin: 0;
+    font-size: 2.2em;
+    color: #004080;
+}
+
+/* Content Sections */
+.intro-section, .what-we-do, .call-to-support, .content-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.content-section {
+    text-align: left;
+}
+
+section h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.what-we-do {
+    background-color: #fff;
+}
+
+.focus-areas {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.focus-area {
+    flex-basis: 30%;
+    min-width: 250px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.focus-area:hover {
+    transform: translateY(-5px);
+}
+
+.focus-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.focus-area h3 {
+    margin-top: 0;
+    color: #004080;
+}
+
+.note, .important-note, .thank-you-note {
+    font-style: italic;
+    color: #555;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.important-note {
+    font-weight: bold;
+    color: #d9534f;
+    border: 1px solid #f0b8b7;
+    padding: 10px;
+    background-color: #fdf7f7;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.cta-button-secondary {
+    display: inline-block;
+    background: #5bc0de;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.cta-button-secondary:hover {
+    background: #31b0d5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Resources Page */
+.resource-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.resource-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.resource-item h3 {
+    margin-top: 0;
+    color: #004080;
+}
+
+/* Donate Page */
+.donation-method {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.donation-method h3 {
+    margin-top: 0;
+    color: #004080;
+}
+
+/* Contact Page */
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info h3 {
+    margin-bottom: 5px;
+    color: #004080;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0779e4;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit-btn {
+    background: #004080;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.form-submit-btn:hover {
+    background: #0066cc;
+    transform: translateY(-2px);
+}
+
+.form-submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    display: none;
+}
+
+.form-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Error Pages */
+.error-content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.error-content h2 {
+    color: #cc0000;
+    margin-bottom: 20px;
+}
+
+.error-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.error-content ul li {
+    margin: 10px 0;
+}
+
+.error-content ul li a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.error-content ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #bbb;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #07c4e4;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.nonprofit-status {
+    font-style: italic;
+    font-size: 0.85em;
+}
+
+/* Responsive Design */
+@media(max-width: 768px) {
+    header nav .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+    
+    .logo-link { 
+        margin-bottom: 10px; 
+    }
+    
+    header ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+    }
+    
+    header ul.active {
+        display: flex;
+    }
+    
+    header li {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid #444;
+    }
+    
+    .mobile-menu-button {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    .focus-areas {
+        flex-direction: column;
+    }
+    
+    .focus-area {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .hero h1 { 
+        font-size: 2em; 
+    }
+    
+    .hero p { 
+        font-size: 1em; 
+    }
+    
+    section h2 { 
+        font-size: 1.6em; 
+    }
+    
+    .container {
+        width: 95%;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+}

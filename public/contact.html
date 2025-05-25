@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact DFEAT</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">                <a href="/" class="logo-link">
+                    <img src="/images/dfeat-logo.png" alt="DFEAT Logo" class="logo">
+                    <span class="org-name">DFEAT</span>
+                </a>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/resources">Educational Resources</a></li>
+                    <li><a href="/donate">Donate</a></li>
+                    <li><a href="/contact" class="active">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-button" aria-label="Toggle menu">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+            </div>
+        </section>
+
+        <section>
+            <div class="container content-section">
+                <h2>Get in Touch</h2>
+                <p>We welcome your questions, feedback, and inquiries about our educational programs and initiatives.</p>
+
+                <div class="contact-info">
+                    <h3>Email:</h3>
+                    <p><a href="mailto:info@dfeat.org">info@dfeat.org</a> (Once you secure this email)</p>
+
+                    <h3>Mailing Address (for official correspondence):</h3>
+                    <p>Digital Future Education Alliance of Texas (DFEAT)<br>
+                       [Your Registered Agent's Address in Texas or a PO Box once set up]</p>
+                </div>                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Please share your questions or feedback about our educational programs..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-btn">Send Message</button>
+                        <div class="form-message"></div>
+                    </form>
+                </div>
+                <p class="important-note">Please note: DFEAT provides educational information only and cannot offer financial or investment advice.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> Digital Future Education Alliance of Texas (DFEAT). All rights reserved.</p>
+            <p class="nonprofit-status">Digital Future Education Alliance of Texas (DFEAT) is applying for 501(c)(3) nonprofit status.
+            </p>
+            <p><a href="/contact">Contact Us</a> | <a href="/disclaimer">Disclaimers</a></p>
+            <p class="important-note">All content is for educational purposes only and does not constitute financial or investment advice.</p>
+        </div>
+    </footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>
