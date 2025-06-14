@@ -124,26 +124,44 @@ app.use((err, req, res, next) => {
 
 
 // Start server
-const PORT = CONFIG.port || 3000;
+const HTTP_PORT = CONFIG.port || 3000; // Port for HTTP redirection
+const HTTPS_PORT = 443; // Standard HTTPS port
 
-if (CONFIG.https && CONFIG.https.key && CONFIG.https.cert && CONFIG.https.ca) {
-    const httpsOptions = {
-        key: fs.readFileSync(CONFIG.https.key),
-        cert: fs.readFileSync(CONFIG.https.cert),
-        ca: fs.readFileSync(CONFIG.https.ca)
-    };
-    https.createServer(httpsOptions, app).listen(443, () => {
-        console.log('LIFT HTTPS server running on port 443');
-    });
-    // HTTP redirect to HTTPS
-    http.createServer((req, res) => {
-        res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
-        res.end();
-    }).listen(PORT, () => {
-        console.log(`HTTP server redirecting to HTTPS on port ${PORT}`);
-    });
+// Check if HTTPS configuration is present and valid in config.json
+if (CONFIG.https && CONFIG.https.key && CONFIG.https.cert) {
+    try {
+        const httpsOptions = {
+            key: fs.readFileSync(CONFIG.https.key),
+            cert: fs.readFileSync(CONFIG.https.cert)
+            // 'ca' is often not needed if fullchain.pem is used for 'cert'
+        };
+
+        // Create HTTPS server
+        https.createServer(httpsOptions, app).listen(HTTPS_PORT, () => {
+            console.log(`LIFT HTTPS server running on port ${HTTPS_PORT} for ${CONFIG.hostname}`);
+        });
+
+        // Create HTTP server to redirect to HTTPS
+        http.createServer((req, res) => {
+            // Redirect to the hostname specified in config.json to ensure correct domain
+            res.writeHead(301, { "Location": "https://" + CONFIG.hostname + req.url });
+            res.end();
+        }).listen(HTTP_PORT, () => {
+            console.log(`HTTP server running on port ${HTTP_PORT}, redirecting to HTTPS (${CONFIG.hostname})`);
+        });
+
+    } catch (err) {
+        console.error("Could not start HTTPS server. Error reading certificate files:", err.message);
+        console.error("Please ensure 'key' and 'cert' paths in config.json are correct and readable.");
+        console.log("Falling back to HTTP only on port " + HTTP_PORT);
+        app.listen(HTTP_PORT, () => {
+            console.log(`LIFT HTTP server running on port ${HTTP_PORT} (HTTPS setup failed)`);
+        });
+    }
 } else {
-    app.listen(PORT, () => {
-        console.log(`LIFT server running on port ${PORT}`);
+    // Fallback to HTTP if HTTPS is not configured
+    console.log('HTTPS not configured in config.json. Starting HTTP server only.');
+    app.listen(HTTP_PORT, () => {
+        console.log(`LIFT HTTP server running on port ${HTTP_PORT}`);
     });
 }
