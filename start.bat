@@ -1,5 +1,5 @@
 @echo off
-echo Starting DFEAT Website Server...
+echo Starting LIFT Website Server...
 echo.
 
 REM Check if Node.js is installed

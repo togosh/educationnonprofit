@@ -14,7 +14,7 @@ Allow: /js/
 Allow: /images/
 
 # Sitemaps
-Sitemap: https://dfeat.org/sitemap.xml
+Sitemap: https://liftfintech.org/sitemap.xml
 
 # Social media bots
 User-agent: Twitterbot

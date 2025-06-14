@@ -1,4 +1,11 @@
-/* DFEAT Nonprofit Website Styles */
+/* LIFT Nonprofit Website Styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Basic Reset & Body */
 body, html {
     margin: 0;
@@ -7,6 +14,8 @@ body, html {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
+    width: 100%; /* Added to ensure full width */
+    overflow-x: hidden; /* Added to prevent horizontal scroll */
 }
 
 .container {
@@ -46,7 +55,7 @@ header nav .nav-container {
 /* Handle missing logo image gracefully */
 .logo[src=""]:after,
 .logo:not([src]):after {
-    content: "DFEAT";
+    content: "LIFT";
     display: inline-block;
     height: 50px;
     line-height: 50px;
@@ -158,14 +167,25 @@ header a:hover, header a.active {
     color: #004080;
 }
 
-/* Content Sections */
-.intro-section, .what-we-do, .call-to-support, .content-section {
-    padding: 40px 0;
-    text-align: center;
+/* Banner for static pages */
+.banner-container {
+    width: 100%;
+    text-align: center; /* Center the image if it's smaller than the container */
+    padding: 20px 0; /* Add some padding above and below */
+    background-color: #fff; /* Optional: set a background color if needed */
 }
 
-.content-section {
-    text-align: left;
+.page-banner-image {
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+    margin: 0 auto; /* Center the image if max-width is less than container width */
+}
+
+/* Content Sections */
+.intro-section, .what-we-do, .call-to-support {
+    padding: 40px 0;
+    text-align: center;
 }
 
 section h2 {
@@ -252,7 +272,15 @@ section h2 {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
-    transition: box-shadow 0.3s ease;
+    display: flex; /* Added for centering */
+    flex-direction: column; /* Added for centering */
+    align-items: center; /* Added for centering */
+}
+
+.resource-item img {
+    max-width: 100%; /* Ensure image scales down */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Add some space below the image */
 }
 
 .resource-item:hover {
@@ -431,6 +459,11 @@ footer a:hover {
 .nonprofit-status {
     font-style: italic;
     font-size: 0.85em;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
 }
 
 /* Responsive Design */

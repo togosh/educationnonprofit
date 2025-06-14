@@ -1,10 +1,10 @@
 @echo off
-title DFEAT Development Server
+title LIFT Development Server
 
 :restart
 cls
 echo ============================================
-echo    DFEAT Development Server
+echo    LIFT Development Server
 echo ============================================
 echo.
 echo Server URL: http://localhost:3000

@@ -1,5 +1,5 @@
 @echo off
-echo === DFEAT Website Update Script ===
+echo === LIFT Website Update Script ===
 echo.
 
 REM Check if forever is available
@@ -26,7 +26,7 @@ echo Installing/updating dependencies...
 npm install
 
 REM Start the server with forever
-echo Starting DFEAT server...
+echo Starting LIFT server...
 forever start index.js
 
 REM Show all logs

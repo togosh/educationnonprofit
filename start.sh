@@ -1,6 +1,6 @@
 #!/bin/bash
-# Start script for DFEAT website
-echo "Starting DFEAT website server..."
+# Start script for LIFT website
+echo "Starting LIFT website server..."
 
 # Check if forever is installed
 if ! command -v forever &> /dev/null; then

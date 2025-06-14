@@ -1,8 +1,9 @@
 {
-  "name": "dfeat-website",
+  "name": "lift-website",
   "version": "1.0.0",
-  "description": "Digital Future Education Alliance of Texas - Educational nonprofit website",
-  "main": "index.js",  "scripts": {
+  "description": "Literacy & Innovation in Financial Technology Alliance - Educational nonprofit website",
+  "main": "index.js",
+  "scripts": {
     "start": "node index.js",
     "dev": "node index.js",
     "forever": "forever start index.js",
@@ -11,8 +12,13 @@
     "logs": "forever logs 0 -f",
     "update": "git pull && npm install && npm run forever",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },"keywords": ["education", "nonprofit", "digital", "blockchain", "texas"],
-  "author": "DFEAT",
+  },
+  "keywords": [
+    "education",
+    "nonprofit",
+    "digital"
+  ],
+  "author": "LIFT",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

@@ -1,10 +1,7 @@
-// DFEAT Website JavaScript
+// LIFT Website JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Set current year in footer
-    const yearSpan = document.getElementById('year');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
+    loadFooter(); // Call loadFooter here
 
     // Mobile Menu Toggle
     const menuButton = document.querySelector('.mobile-menu-button');
@@ -80,3 +77,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function loadFooter() {
+    fetch('/footer.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.text();
+        })
+        .then(data => {
+            const footerElement = document.querySelector('footer');
+            if (footerElement) {
+                footerElement.innerHTML = data;
+                const yearSpan = document.getElementById('year'); // Ensure year is set after footer loads
+                if (yearSpan) {
+                    yearSpan.textContent = new Date().getFullYear();
+                }
+            } else {
+                console.error('Footer element not found in the page.');
+            }
+        })
+        .catch(error => {
+            console.error('Failed to load footer:', error);
+        });
+}

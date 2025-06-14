@@ -13,7 +13,7 @@
         "secure": false,
         "user": "your-email@gmail.com",
         "pass": "your-app-password",
-        "from": "DFEAT <noreply@dfeat.org>",
-        "to": "info@dfeat.org"
+        "from": "LIFT <liftfintech@gmail.com>",
+        "to": "liftfintech@gmail.com"
     }
 }

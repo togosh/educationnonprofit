@@ -2,7 +2,7 @@
 
 This directory needs the following actual image files:
 
-1. dfeat-logo.png (200x60px recommended)
+1. lift-logo.png (200x60px recommended)
 2. banner.jpg (1200x400px recommended) 
 3. icon-dlt.png (64x64px)
 4. icon-decentralized.png (64x64px)

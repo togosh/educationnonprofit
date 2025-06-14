@@ -1,8 +1,8 @@
-# DFEAT Website Images
+# LIFT Website Images
 
-This directory contains all images for the DFEAT website including:
+This directory contains all images for the LIFT website including:
 
-- dfeat-logo.png - Main organization logo
+- lift-logo.png - Main organization logo
 - banner.jpg - Hero section banner image  
 - icon-dlt.png - Distributed Ledger Technology icon
 - icon-decentralized.png - Decentralized Systems icon

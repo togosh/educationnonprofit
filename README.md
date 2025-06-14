@@ -1,4 +1,4 @@
-# DFEAT - Digital Future Education Alliance of Texas
+# LIFT - Literacy & Innovation in Financial Technology Alliance
 
 A 501(c)(3) nonprofit educational website focused on digital technologies, distributed ledger systems, and decentralized networks. Built with Node.js and Express, featuring educational resources, donation capabilities, and contact functionality.
 
@@ -14,248 +14,152 @@ A 501(c)(3) nonprofit educational website focused on digital technologies, distr
 - **Forever Process Management**: Production-ready server management with forever
 - **Automated Updates**: Git-based update scripts for easy deployment
 
-## 🚀 Quick Start
+## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v16 or higher)
-- npm (Node Package Manager)
 
-### Installation
+- Node.js (v14 or higher)
+- npm (usually comes with Node.js)
+- Git
 
-1. **Clone or download the project**
-   ```bash
-   cd c:\Code\educationnonprofit
-   ```
+### Installation & Setup
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/lift-website.git
+    cd lift-website
+    ```
 
-3. **Configure email settings (optional)**
-   - Copy `config-copy.json` to `config.json`
-   - Update email settings in `config.json` for contact form functionality
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-4. **Start the server**
-   ```bash
-   npm start
-   # or
-   node index.js
-   ```
+3.  **Configure Environment:**
+    Copy `config-copy.json` to `config.json` and update the settings, especially for email functionality:
+    ```bash
+    cp config-copy.json config.json
+    ```
+    Edit `config.json` with your SMTP server details and email addresses:
+    ```json
+    {
+        "debug": true,
+        "port": 3000,
+        "hostname": "localhost",
+        "https": {
+            "cert": "./ssl/your-cert.crt",
+            "ca": "./ssl/your-ca.ca-bundle",
+            "key": "./ssl/your-key.key"
+        },
+        "email": {
+            "host": "smtp.example.com",
+            "port": 587,
+            "secure": false,
+            "user": "your-email@example.com",
+            "pass": "your-email-password",
+            "from": "LIFT <noreply@lift.org>",
+            "to": "contact@lift.org"
+        }
+    }
+    ```
 
-5. **Visit the website**
-   Open http://localhost:3000 in your browser
+### Running the Application
 
-## 🔄 Updating the Website
+-   **Development Mode:**
+    ```bash
+    npm run dev 
+    ```
+    This will start the server using `nodemon` for automatic restarts on file changes. Access at `http://localhost:3000`.
 
-### Automatic Update (Recommended)
+-   **Production Mode (using `forever`):**
+    ```bash
+    npm run forever  # Starts the server with forever
+    npm run stop     # Stops the server
+    npm run restart  # Restarts the server
+    npm run logs     # Tails the server logs
+    ```
 
-**Windows:**
-```bash
-update.bat
-```
+-   **Production Mode (using `pm2` - Recommended for advanced users):**
+    If you prefer `pm2` for process management:
+    ```bash
+    npm install -g pm2
+    pm2 start index.js --name "lift-website"
+    pm2 logs lift-website
+    pm2 stop lift-website
+    pm2 restart lift-website
+    pm2 delete lift-website
+    ```
 
-**Linux/Mac:**
-```bash
-./update.sh
-```
+## 🛠️ Scripts
 
-**Using npm:**
-```bash
-npm run update
-```
-
-### Manual Update
-```bash
-git pull
-npm install
-npm start
-```
-
-The update scripts will:
-- Stop any running server processes
-- Pull the latest changes from git
-- Install/update dependencies
-- Restart the server
-- Open the website in your browser (Windows version)
+-   `npm start`: Starts the server with `node index.js`.
+-   `npm run dev`: Starts the server with `nodemon index.js` for development.
+-   `npm run forever`: Starts the server with `forever` for production.
+-   `npm run stop`: Stops the `forever` process.
+-   `npm run restart`: Restarts the `forever` process.
+-   `npm run logs`: Shows logs from the `forever` process.
+-   `npm run update`: Pulls latest changes from git, installs dependencies, and restarts the `forever` process.
+-   `npm test`: (Currently placeholder) `echo "Error: no test specified" && exit 1`
 
 ## 📁 Project Structure
 
 ```
-c:\Code\educationnonprofit\
-├── index.js                 # Main Node.js server
-├── package.json             # Dependencies and scripts
-├── config.json              # Server configuration
-├── config-copy.json         # Configuration template
-├── update.sh                # Linux/Mac update script
-├── update.bat               # Windows update script
-├── start.sh                 # Linux/Mac startup script
-├── start.bat                # Windows startup script
-├── dev.bat                  # Development utility script
+lift-website/
+├── public/                  # Static assets (CSS, JS, images)
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── main.js
+│   ├── images/
+│   │   ├── lift-logo.png # Organization logo
+│   │   ├── banner.jpg
+│   │   └── ... (other images & icons)
+│   ├── 404.html
+│   ├── about.html
+│   ├── contact.html
+│   ├── disclaimer.html
+│   ├── donate.html
+│   ├── index.html
+│   ├── navbar.html
+│   ├── resources.html
+│   ├── robots.txt
+│   └── sitemap.xml
+├── index.js                 # Main Express server file
+├── package.json             # Project metadata and dependencies
+├── package-lock.json
+├── config.json              # Server configuration (ignored by git)
+├── config-copy.json         # Template for config.json
 ├── README.md                # This file
-├── .gitignore              # Git ignore rules
-└── public/                 # Static web files
-    ├── index.html          # Homepage
-    ├── about.html          # About page
-    ├── resources.html      # Educational resources
-    ├── donate.html         # Donation page
-    ├── contact.html        # Contact form
-    ├── disclaimer.html     # Legal disclaimers
-    ├── 404.html           # Error page
-    ├── robots.txt         # SEO robots file
-    ├── sitemap.xml        # SEO sitemap
-    ├── css/
-    │   └── styles.css     # Main stylesheet
-    ├── js/
-    │   └── main.js        # JavaScript functionality
-    └── images/            # Website images
-        ├── banner.jpg     # Hero section banner image
-        ├── dfeat-logo.png # Organization logo
-        ├── placeholder.txt # Image requirements list
-        └── README.md      # Image documentation
+├── PROJECT-SUMMARY.md       # Summary of completed features
+├── dev.bat                  # Windows dev server script
+├── start.bat                # Windows start script
+├── start.sh                 # Linux/macOS start script (using forever)
+├── update.bat               # Windows update script (git pull, npm install, forever restart)
+└── update.sh                # Linux/macOS update script
 ```
 
-## ⚙️ Configuration
+## 🎨 Customization
 
-### Email Setup
-To enable contact form functionality:
+-   **Logo & Branding**: Replace `lift-logo.png` and other images in `public/images/`.
+-   **Styles**: Modify `public/css/styles.css` for visual changes.
+-   **Content**: Edit HTML files in the `public/` directory.
+-   **Configuration**: Update `config.json` for server port, email settings, etc.
 
-1. Copy `config-copy.json` to `config.json`
-2. Update the email configuration:
+## 📜 License
 
-```json
-{
-  "port": 3000,
-  "email": {
-    "host": "your-smtp-host.com",
-    "port": 587,
-    "secure": false,
-    "user": "your-email@domain.com",
-    "pass": "your-app-password",
-    "from": "noreply@dfeat.org",
-    "to": "contact@dfeat.org"
-  }
-}
-```
-
-### HTTPS Setup (Production)
-For production deployment with SSL:
-
-```json
-{
-  "https": {
-    "cert": "/path/to/certificate.crt",
-    "key": "/path/to/private.key",
-    "ca": "/path/to/ca-bundle.crt"
-  }
-}
-```
-
-## 🎨 Images Status
-
-**✅ Integrated Images:**
-- `dfeat-logo.png` - Main organization logo (✅ Active)
-- `banner.jpg` - Hero section banner image (✅ Active)
-- `favicon.ico` - Website favicon (✅ Active)
-- `apple-touch-icon.png` - Apple touch icon (✅ Active)
-- `favicon-32x32.png` - Standard favicon (✅ Active)
-- `favicon-16x16.png` - Small favicon (✅ Active)
-
-**📦 Available for Customization:**
-- `icon-dlt.png` (64x64px) - Distributed Ledger Technology icon
-- `icon-decentralized.png` (64x64px) - Decentralized Systems icon
-- `icon-digital-assets.png` (64x64px) - Digital Assets icon
-
-All banner images are properly integrated into the hero sections with responsive overlay effects.
-
-## 🌐 Available Routes
-
-- `/` - Homepage
-- `/about` - About DFEAT
-- `/resources` - Educational resources
-- `/donate` - Donation page
-- `/contact` - Contact form
-- `/disclaimer` - Legal disclaimers
-- `/api/contact` - Contact form API endpoint
-
-## 📧 Contact Form API
-
-The contact form submits to `/api/contact` with:
-
-```json
-{
-  "name": "Full Name",
-  "email": "email@example.com",
-  "message": "Contact message"
-}
-```
-
-Response:
-```json
-{
-  "success": true,
-  "message": "Message sent successfully"
-}
-```
-
-## 🚀 Deployment
-
-### Development
-```bash
-npm start
-```
-
-### Production
-1. Set up SSL certificates
-2. Configure email settings
-3. Update config.json for production
-4. Use PM2 or similar for process management:
-
-```bash
-npm install -g pm2
-pm2 start index.js --name "dfeat-website"
-pm2 startup
-pm2 save
-```
-
-## 🔒 Security Features
-
-- Input validation on contact forms
-- CORS protection
-- Express security headers
-- 404 error handling
-- XSS protection through proper HTML escaping
-
-## 📋 TODO
-
-- [ ] Add actual logo and banner images
-- [ ] Configure production email settings
-- [ ] Set up SSL certificates for HTTPS
-- [ ] Add donation payment processing
-- [ ] Implement analytics tracking
-- [ ] Add blog/news section
-- [ ] Create admin dashboard
-- [ ] Add newsletter signup
+This project is licensed under the ISC License. See the `LICENSE` file for details (though not explicitly included, ISC is specified in `package.json`).
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+Contributions are welcome! Please fork the repository and submit a pull request.
 
-## 📄 License
+## 📞 Contact
 
-This project is created for the Digital Future Education Alliance of Texas (DFEAT), a 501(c)(3) nonprofit organization.
-
-## 📞 Support
-
-For support or questions:
-- Email: contact@dfeat.org
-- Website: http://localhost:3000/contact
+Literacy & Innovation in Financial Technology Alliance (LIFT)
+- Website: [https://liftfintech.org](https://liftfintech.org) (Example URL, update as needed)
+- Email: lifefintech@gmail.com
 
 ---
 
-**Digital Future Education Alliance of Texas (DFEAT)**  
-*Empowering communities through digital education and emerging technologies*
+**Literacy & Innovation in Financial Technology Alliance (LIFT)**  
+*Empowering through Education*

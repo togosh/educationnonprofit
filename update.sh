@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "=== DFEAT Website Update Script ==="
+echo "=== LIFT Website Update Script ==="
 
 # List current forever processes
 forever list
@@ -17,7 +17,7 @@ echo "Installing/updating dependencies..."
 npm install
 
 # Start the server with forever
-echo "Starting DFEAT server..."
+echo "Starting LIFT server..."
 forever start index.js
 
 # Show all logs
