@@ -63,7 +63,217 @@
 
     <div class="container content-section">
       <article>
-        <!-- Content will be added here -->
+        <!-- ---------- KEY TAKEAWAYS ---------- -->
+        <section class="key-takeaways">
+          <h2>Key Takeaways</h2>
+          <ul>
+            <li>
+              <strong>Blockchains are shared ledgers:</strong>
+              Think of a blockchain as a public notebook that many computers keep
+              identical copies of. Everyone sees the same history of transactions,
+              which builds trust without a central authority.
+            </li>
+            <li>
+              <strong>Design choices create trade-offs:</strong>
+              Bitcoin focuses on being “digital gold,” while Ethereum acts as a
+              programmable world computer. Each chain optimizes for different goals,
+              so no single blockchain is best at everything.
+            </li>
+            <li>
+              <strong>Speed vs. decentralization:</strong>
+              Newer chains like Solana aim for very high transaction speeds and low
+              fees, but they often rely on smaller validator sets. Older chains such
+              as Bitcoin and Ethereum sacrifice speed to maximize openness and
+              security.
+            </li>
+            <li>
+              <strong>Public vs. private networks:</strong>
+              Public blockchains are open to anyone, while private (permissioned)
+              blockchains restrict access to known participants. Each model suits
+              different use cases.
+            </li>
+            <li>
+              <strong>Framework for comparison:</strong>
+              When you hear about a new blockchain, ask about its consensus method,
+              throughput, fees, decentralization level, governance model, and real-
+              world track record.
+            </li>
+          </ul>
+        </section>
+
+        <!-- ---------- CASE STUDY 1 ---------- -->
+        <section>
+          <h2>Case Study 1 — Bitcoin vs. Ethereum: Different Aims, Different Tech</h2>
+
+          <p>
+            <strong>Purpose:</strong> Bitcoin was created to be an independent form of
+            money and long-term store of value. Ethereum was designed as a platform
+            for running smart contracts and decentralized applications (dApps).
+          </p>
+
+          <p>
+            <strong>Consensus &amp; security:</strong> Bitcoin relies on
+            <em>Proof-of-Work</em> mining, which is energy-intensive and produces a
+            new block roughly every ten minutes. Ethereum now uses
+            <em>Proof-of-Stake</em>, where validators lock up (stake) ETH and create
+            new blocks about every twelve seconds. PoS is far more energy-efficient
+            but involves different security assumptions.
+          </p>
+
+          <p>
+            <strong>Supply &amp; economics:</strong> Bitcoin has a hard cap of
+            21 million coins, making its supply predictable and scarce. Ether (ETH)
+            does not have a fixed cap; instead, Ethereum introduced fee “burning”
+            that can reduce supply when network activity is high. Each policy reflects
+            its community’s philosophy.
+          </p>
+
+          <p>
+            <strong>Transaction capability:</strong> Bitcoin’s base layer mainly
+            handles simple BTC transfers. Ethereum’s base layer executes many kinds
+            of transactions (smart-contract calls) but charges <em>gas fees</em>
+            that rise when the network is busy.
+          </p>
+
+          <!-- SUGGESTION: Insert an infographic comparing Bitcoin and Ethereum on purpose,
+              consensus, speed, and supply -->
+          <img src="/images/placeholder-bitcoin-ethereum.png"
+              alt="Infographic comparing Bitcoin and Ethereum" />
+
+          <p>
+            <em>Bottom line:</em> Bitcoin excels at simplicity and scarcity; Ethereum
+            excels at flexibility and programmability. Each made deliberate choices
+            that suit different goals.
+          </p>
+        </section>
+
+        <!-- ---------- CASE STUDY 2 ---------- -->
+        <section>
+          <h2>Case Study 2 — Alternative Ecosystems</h2>
+
+          <h3>Ethereum vs. Solana</h3>
+          <p>
+            Solana targets very high throughput (tens of thousands of transactions
+            per second) using a hybrid <em>Proof-of-History + Proof-of-Stake</em>
+            approach. This speed supports fast games and real-time trading, but it
+            requires powerful hardware and has resulted in several temporary
+            outages. Ethereum remains slower but more decentralized and
+            battle-tested, with a much larger developer community.
+          </p>
+
+          <!-- SUGGESTION: Insert bar chart showing relative TPS and average fees for
+              Ethereum and Solana -->
+          <img src="/images/placeholder-eth-solana.png"
+              alt="Chart comparing Ethereum and Solana performance" />
+
+          <h3>Public vs. Private (Permissioned) Blockchains</h3>
+          <p>
+            Public networks (e.g., Bitcoin, Ethereum) allow anyone to read data and
+            help secure the chain. Private or consortium chains (e.g., Hyperledger
+            Fabric, Quorum) restrict participation to known entities, trading some
+            decentralization for higher speed, privacy, and regulatory compliance—
+            useful for business supply chains or inter-bank settlement.
+          </p>
+
+          <!-- SUGGESTION: Insert side-by-side diagram of public and private blockchain
+              governance structures -->
+          <img src="/images/placeholder-public-private.png"
+              alt="Diagram contrasting public and private blockchains" />
+
+          <p>
+            <em>Takeaway:</em> Different problems call for different blockchain
+            designs. Speed, privacy, and openness exist on a sliding scale.
+          </p>
+        </section>
+
+        <!-- ---------- COMPARISON FRAMEWORK ---------- -->
+        <section>
+          <h2>Framework for Comparing Any Blockchain</h2>
+          <ul>
+            <li>
+              <strong>Consensus mechanism:</strong> PoW, PoS, or something else?
+              Affects energy use, security assumptions, and openness.
+            </li>
+            <li>
+              <strong>Transaction throughput &amp; fees:</strong> How many
+              transactions per second and at what cost?
+            </li>
+            <li>
+              <strong>Smart-contract support:</strong> Can it run complex code or
+              only simple transfers?
+            </li>
+            <li>
+              <strong>Ecosystem maturity:</strong> Size of developer community,
+              number of users, and availability of tools.
+            </li>
+            <li>
+              <strong>Security track record:</strong> Years in operation, history of
+              hacks or critical failures.
+            </li>
+            <li>
+              <strong>Decentralization metrics:</strong> Number and geographic
+              spread of validators or miners.
+            </li>
+            <li>
+              <strong>Governance model:</strong> Community-driven or foundation-led?
+              How are upgrades decided?
+            </li>
+            <li>
+              <strong>Unique features:</strong> Privacy layers, interoperability,
+              on-chain identity, etc.
+            </li>
+          </ul>
+
+          <!-- SUGGESTION: Insert spider-chart or checklist graphic illustrating the
+              comparison categories -->
+          <img src="/images/placeholder-framework.png"
+              alt="Graphic of blockchain comparison factors" />
+        </section>
+
+        <!-- ---------- RISKS & IMPORTANT CONSIDERATIONS ---------- -->
+        <section class="important-note">
+          <h2>Risks &amp; Important Considerations</h2>
+          <ul>
+            <li>
+              <strong>Irreversibility:</strong> Mistakes and hacks on blockchains are
+              usually permanent; there is no “undo” button.
+            </li>
+            <li>
+              <strong>Security vulnerabilities:</strong> Smart contracts and
+              cross-chain bridges can contain bugs that attackers exploit.
+            </li>
+            <li>
+              <strong>Trade-offs are inevitable:</strong> Faster, cheaper networks
+              may be less decentralized or more prone to outages.
+            </li>
+            <li>
+              <strong>Ecosystems evolve:</strong> Upgrades can change performance and
+              economics over time—always check the latest information.
+            </li>
+            <li>
+              <strong>No endorsements:</strong> Examples here are academic. We do not
+              recommend using or investing in any specific blockchain.
+            </li>
+          </ul>
+        </section>
+
+        <!-- ---------- FURTHER READING ---------- -->
+        <section class="further-reading">
+          <h2>Further Reading &amp; Sources</h2>
+          <ul>
+            <li><a href="https://www.investopedia.com/bitcoin-vs-ethereum-differences-5190465" target="_blank">Investopedia – Bitcoin vs. Ethereum</a></li>
+            <li><a href="https://crypto.com/university/ethereum-vs-solana" target="_blank">Crypto.com – Ethereum vs. Solana</a></li>
+            <li><a href="https://www.geeksforgeeks.org/hyperledger-vs-ethereum" target="_blank">GeeksforGeeks – Hyperledger vs. Ethereum</a></li>
+            <li><a href="https://101blockchains.com/ethereum-vs-solana-vs-polkadot" target="_blank">101 Blockchains – Ethereum vs. Solana vs. Polkadot</a></li>
+            <li><a href="https://4irelabs.com/articles/choosing-a-blockchain-for-your-next-decentralized-project" target="_blank">4IRE Labs – Choosing a Blockchain</a></li>
+          </ul>
+        </section>
+
+        <p>
+          <em>Disclaimer:</em>
+          This article is for educational purposes only and does not constitute
+          financial advice.
+        </p>
       </article>
     </div>
     <div class="container button-container" style="text-align: center; margin-top: 20px; margin-bottom: 20px;">

@@ -63,7 +63,195 @@
 
     <div class="container content-section">
       <article>
-        <!-- Content will be added here -->
+        <!-- ---------- KEY TAKEAWAYS ---------- -->
+        <section class="key-takeaways">
+          <h2>Key Takeaways</h2>
+          <ul>
+            <li>
+              <strong>Blockchain search engine:</strong>
+              A block explorer is a web tool that lets anyone view and verify data on a public
+              blockchain. It’s like a search engine or browser for the blockchain, indexing every
+              block, transaction, and address for easy lookup.
+            </li>
+            <li>
+              <strong>Search by TX, address, or block:</strong>
+              Enter a transaction ID (hash), wallet address, or block number to view details such as
+              sender/recipient, amount, fee, timestamp, and confirmation status.
+            </li>
+            <li>
+              <strong>Chain-specific tools:</strong>
+              Each blockchain has its own explorers (e.g., Etherscan for Ethereum, Blockchain.com for
+              Bitcoin). You cannot query Bitcoin data on an Ethereum explorer or vice versa.
+            </li>
+            <li>
+              <strong>Verify and analyze transactions:</strong>
+              Explorers help confirm whether a transaction is pending or finalized, and provide network
+              data such as gas fees, latest blocks, and mempool size.
+            </li>
+            <li>
+              <strong>Public data &amp; privacy:</strong>
+              Explorer results are fully public and pseudonymous. Never enter private keys, and always
+              verify you are on a trusted site to avoid phishing.
+            </li>
+          </ul>
+        </section>
+
+        <!-- ---------- 1. WHAT IS A BLOCK EXPLORER? ---------- -->
+        <section>
+          <h2>What Is a Block Explorer?</h2>
+          <p>
+            A <strong>block explorer</strong> (or blockchain explorer) is an online application that allows
+            anyone to browse and search the records stored on a blockchain. It pulls data directly
+            from the public ledger and presents it in a human-readable format. Every block,
+            transaction, and wallet address ever recorded is indexed and can be queried.
+          </p>
+          <p>
+            <em>Analogy:</em>
+            Think of the blockchain as a massive public library of all transactions. A block explorer
+            is the library’s search catalog: you can look up any “book” by its index (a block or
+            transaction ID) or any “author” by name (an address) and instantly read its contents.
+          </p>
+
+          <!-- SUGGESTION: Insert a simple diagram showing “Blockchain” on the left and “Block Explorer” on the right,
+              with arrows indicating how raw data is indexed and displayed to users. -->
+          <img src="/images/placeholder-block-explorer-diagram.png"
+              alt="Diagram showing how a block explorer indexes blockchain data" />
+        </section>
+
+        <!-- ---------- 2. BASIC NAVIGATION ---------- -->
+        <section>
+          <h2>Basic Navigation – Transactions, Addresses, Blocks</h2>
+
+          <h3>Transactions</h3>
+          <p>
+            Paste a transaction hash into the search bar to see its “receipt” on the blockchain:
+            sender, recipient, amount, timestamp, fee, and current confirmation count. This is the
+            fastest way to confirm that your transfer was included in a block.
+          </p>
+
+          <h3>Addresses (Wallets)</h3>
+          <p>
+            Entering a wallet address shows its current balance and complete transaction history.
+            Many explorers also list any tokens (ERC-20, NFTs, etc.) held by that address. Keep in
+            mind that anyone can view this information – blockchain transparency is a two-edged
+            sword.
+          </p>
+
+          <h3>Blocks</h3>
+          <p>
+            Searching a block number (height) or block hash displays that block’s miner/validator,
+            timestamp, size, and the list of all transactions it contains. Browsing recent blocks
+            is a good way to see network activity in real time.
+          </p>
+
+          <!-- SUGGESTION: Insert screenshot placeholder of a block explorer search bar highlighting
+              options to paste a transaction hash, address, or block number. -->
+          <img src="/images/placeholder-search-bar.png"
+              alt="Example block explorer search bar" />
+        </section>
+
+        <!-- ---------- 3. ADVANCED USES & TIPS ---------- -->
+        <section>
+          <h2>Advanced Uses and Tips</h2>
+          <ul>
+            <li>
+              <strong>Track confirmations:</strong>
+              When waiting for a crypto deposit on an exchange, watch the confirmation counter to
+              know when your funds are fully credited.
+            </li>
+            <li>
+              <strong>Monitor network congestion:</strong>
+              Many explorers display pending transactions or current gas fees so you can decide
+              whether to wait or pay a higher fee.
+            </li>
+            <li>
+              <strong>Inspect smart contracts:</strong>
+              On Ethereum explorers, you can read verified contract code and even interact with
+              “read/write” functions (advanced users only).
+            </li>
+            <li>
+              <strong>Follow wallet activity:</strong>
+              Analysts track “whale” wallets to see large transfers.  You can also export CSV data
+              for taxes or research.
+            </li>
+            <li>
+              <strong>Use multiple explorers:</strong>
+              If one site is slow or offline, try an alternative (e.g., Blockchair for Bitcoin,
+              Ethplorer for Ethereum) to cross-check results.
+            </li>
+          </ul>
+
+          <!-- SUGGESTION: Insert a graphic showing multiple explorer logos pointing to the
+              same blockchain data, emphasizing redundancy. -->
+          <img src="/images/placeholder-multi-explorers.png"
+              alt="Multiple block explorer options" />
+        </section>
+
+        <!-- ---------- 4. RISKS & IMPORTANT CONSIDERATIONS ---------- -->
+        <section class="important-note">
+          <h2>Risks &amp; Important Considerations</h2>
+          <ul>
+            <li>
+              <strong>Verify the URL:</strong>
+              Phishing sites imitate popular explorers. Check the domain (e.g., <em>etherscan.io</em>,
+              <em>blockchain.com</em>) and ensure the connection is secured (HTTPS).
+            </li>
+            <li>
+              <strong>Read-only by default:</strong>
+              Explorers should never ask for your private keys or seed phrase.  If a site requests
+              them, leave immediately.
+            </li>
+            <li>
+              <strong>Confirmation depth:</strong>
+              Treat transactions as final only after enough confirmations (e.g., six for Bitcoin)
+              to protect against rare chain reorganizations.
+            </li>
+            <li>
+              <strong>Privacy trade-offs:</strong>
+              Querying your own address on a public explorer can link your IP to that address in
+              the explorer’s logs.  For higher privacy, consider privacy-focused explorers or run
+              your own node.
+            </li>
+            <li>
+              <strong>No fees required:</strong>
+              Legitimate explorers are free for basic lookups.  If a site charges you just to see
+              a transaction, it’s likely a scam.
+            </li>
+          </ul>
+        </section>
+
+        <!-- ---------- 5. FURTHER READING & SOURCES ---------- -->
+        <section class="further-reading">
+          <h2>Further Reading &amp; Sources</h2>
+          <ul>
+            <li>
+              <a href="https://www.gemini.com/cryptopedia/what-is-block-explorer-bitcoin"
+                target="_blank">Gemini – What Is a Block Explorer?</a>
+            </li>
+            <li>
+              <a href="https://www.blockchain.com/learning-portal/what-is-a-block-explorer"
+                target="_blank">Blockchain.com – Learning Portal</a>
+            </li>
+            <li>
+              <a href="https://www.ledger.com/academy/how-to-use-etherscan-to-explore-the-ethereum-blockchain"
+                target="_blank">Ledger Academy – How to Use Etherscan</a>
+            </li>
+            <li>
+              <a href="https://www.cointelegraph.com/news/how-do-you-use-a-block-explorer"
+                target="_blank">Cointelegraph – How Do You Use a Block Explorer?</a>
+            </li>
+            <li>
+              <a href="https://www.koinly.io/blog/etherscan-guide/"
+                target="_blank">Koinly – Beginner’s Guide to Etherscan</a>
+            </li>
+          </ul>
+        </section>
+
+        <p>
+          <em>Disclaimer:</em>
+          This article is for educational purposes only and does not constitute financial advice.
+        </p>
+
       </article>
     </div>
     <div class="container button-container" style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
