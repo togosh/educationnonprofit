@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 2: Navigating Digital Assets - LIFT</title>
+
+  <!-- External stylesheet shared across modules -->
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- Favicons (optional – keep or remove as needed) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"  href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"  href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/images/site.webmanifest">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body>
+<!-- ---------- NAV BAR (matches Module 1) ---------- -->
+<nav class="fixed w-full bg-gray-800 border-b border-gray-800"
+     style="background:#333;color:#fff;padding:1rem 0;border-bottom:#0779e4 3px solid;">
+  <div class="container mx-auto px-4 py-4" style="width:80%;max-width:1100px;margin:auto;overflow:hidden;padding:0 20px;">
+    <div class="flex justify-between items-center" style="display:flex;justify-content:space-between;align-items:center;">
+      <!-- Logo -->
+      <a href="/" class="logo-link" style="display:flex;align-items:center;text-decoration:none;color:#fff;">
+        <img src="/images/lift-logo.png" alt="LIFT Logo" class="logo" style="height:50px;margin-right:10px;">
+        <span class="org-name" style="font-size:1.5em;font-weight:bold;">LIFT</span>
+      </a>
+
+      <!-- Desktop menu -->
+      <div class="hidden md:flex items-center space-x-8" style="display:flex;align-items:center;">
+        <ul style="padding:0;list-style:none;margin:0;display:flex;">
+          <li style="padding:0 15px;"><a href="/"          style="color:#fff;text-decoration:none;text-transform:uppercase;font-size:0.9em;">Home</a></li>
+          <li style="padding:0 15px;"><a href="/about"     style="color:#fff;text-decoration:none;text-transform:uppercase;font-size:0.9em;">About Us</a></li>
+          <li style="padding:0 15px;"><a href="/resources" style="color:#fff;text-decoration:none;text-transform:uppercase;font-size:0.9em;">Educational Resources</a></li>
+          <li style="padding:0 15px;"><a href="/donate"    style="color:#fff;text-decoration:none;text-transform:uppercase;font-size:0.9em;">Donate</a></li>
+          <li style="padding:0 15px;"><a href="/contact"   style="color:#fff;text-decoration:none;text-transform:uppercase;font-size:0.9em;">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Mobile menu button (optional JS toggling via /js/main.js) -->
+      <button class="md:hidden p-2" id="mobile-menu-button" aria-label="Toggle menu"
+              style="display:none;background:none;border:none;color:white;font-size:2em;cursor:pointer;">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="hidden md:hidden bg-gray-900" id="mobile-menu" style="display:none;background:#333;">
+      <div class="py-2 space-y-1" style="padding:10px 0;">
+        <a href="/"          style="display:block;color:#fff;text-decoration:none;padding:10px;text-align:center;">Home</a>
+        <a href="/about"     style="display:block;color:#fff;text-decoration:none;padding:10px;text-align:center;">About Us</a>
+        <a href="/resources" style="display:block;color:#fff;text-decoration:none;padding:10px;text-align:center;">Educational Resources</a>
+        <a href="/donate"    style="display:block;color:#fff;text-decoration:none;padding:10px;text-align:center;">Donate</a>
+        <a href="/contact"   style="display:block;color:#fff;text-decoration:none;padding:10px;text-align:center;">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ---------- HERO ---------- -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Module 2: Navigating Digital Assets</h1>
+    <p>Understand what digital assets are, how to obtain and store them, how transactions work, and the major risks involved.</p>
+  </div>
+</section>
+
+<!-- ---------- MAIN CONTENT ---------- -->
+<main>
+  <div class="container content-section">
+    <article>
+
+      <!-- Key Takeaways (highlight box) -->
+      <section class="key-takeaways">
+        <h2>Key Takeaways</h2>
+        <ul>
+          <li>Digital assets are items of value that exist purely in digital form (e.g., cryptocurrencies, tokens, stablecoins, NFTs).</li>
+          <li>Ownership and transfers are recorded on blockchains—shared digital ledgers visible to all participants.</li>
+          <li>You can acquire digital assets via exchanges, as payment, or by mining/earning them; they are stored in wallets that protect your private keys.</li>
+          <li>Transactions involve signing messages with your private key and paying a small network fee; confirmations are recorded on-chain.</li>
+          <li>Major risks include extreme price volatility, scams, theft, loss of private keys, and evolving regulations. Never invest more than you can afford to lose.</li>
+        </ul>
+      </section>
+
+      <!-- 1. What Are Digital Assets? -->
+      <section>
+        <h2>What Are Digital Assets? (Cryptocurrency & Beyond)</h2>
+        <p>A <strong>digital asset</strong> is anything valuable that exists only in digital form. Examples range from everyday files (like photos) to blockchain-based assets:</p>
+        <ul>
+          <li><strong>Cryptocurrencies</strong> – digital money such as Bitcoin or Ether.</li>
+          <li><strong>Tokens</strong> – units issued on existing blockchains that can represent utility, governance rights, or shares in a project.</li>
+          <li><strong>Stablecoins</strong> – cryptocurrencies designed to track the value of a stable asset (such as one US dollar).</li>
+          <li><strong>NFTs</strong> (Non-Fungible Tokens) – unique tokens often used for digital art or collectibles.</li>
+        </ul>
+        <p>Unlike physical cash or gold, these assets have no tangible form. Instead, a blockchain—think of it as a shared digital notebook—records who owns what. Because the notebook is copied across thousands of computers, tampering is extremely difficult.</p>
+        <!-- SUGGESTION: Insert an infographic comparing physical assets to digital assets. -->
+      </section>
+
+      <!-- 2. How to Acquire and Store Digital Assets -->
+      <section>
+        <h2>How to Acquire and Store Digital Assets</h2>
+
+        <h3>Common Ways to Acquire</h3>
+        <ul>
+          <li><strong>Buy on an exchange:</strong> Use dollars (or other currency) to purchase crypto on a regulated platform.</li>
+          <li><strong>Accept as payment or gift:</strong> Receive crypto from another person or business.</li>
+          <li><strong>Earn or mine:</strong> Contribute computing power or services and be rewarded in tokens.</li>
+        </ul>
+
+        <h3>Wallets &amp; Private Keys</h3>
+        <p>A <strong>wallet</strong> is software or hardware that stores your <em>private keys</em>—secret codes proving ownership. </p>
+        <p><em>Analogy:</em> If the blockchain is a public mailbox, your private key is the only key that can open your personal slot. Lose it, and you lose access forever.</p>
+
+        <ul>
+          <li><strong>Custodial wallet:</strong> A third-party service (like an exchange) holds the keys on your behalf—convenient, but you must trust them.</li>
+          <li><strong>Self-custody wallet:</strong> You hold your own keys, often using a hardware device kept offline. Ultimate control, but full responsibility.</li>
+        </ul>
+
+        <!-- SUGGESTION: Insert a diagram contrasting custodial vs. self-custody wallets. -->
+      </section>
+
+      <!-- 3. Using Digital Assets in Transactions -->
+      <section>
+        <h2>Using Digital Assets in Transactions</h2>
+        <p>Sending cryptocurrency is like emailing value:</p>
+        <ol>
+          <li>Your wallet creates a message: “Send X coins to address Y.”</li>
+          <li>You sign the message with your private key (proving authorization).</li>
+          <li>The network verifies the signature and adds the transaction to the next block.</li>
+        </ol>
+        <p>A small <strong>transaction fee</strong> (often called <em>gas</em>) pays validators for processing. Confirmations can take seconds to minutes, depending on network congestion.</p>
+        <p>Many people hold crypto instead of spending it due to price swings—values rise and fall quickly. Others use crypto debit cards, online merchants, or peer-to-peer transfers for everyday spending.</p>
+        <!-- SUGGESTION: Insert a flowchart of a crypto transaction from sender to recipient via the blockchain. -->
+      </section>
+
+      <!-- 4. Risks & Important Considerations -->
+      <section class="important-note">
+        <h2>Risks & Important Considerations</h2>
+        <ul>
+          <li><strong>Volatility:</strong> Prices can change by double-digit percentages within hours. You could lose your entire investment.</li>
+          <li><strong>Security:</strong> Losing a private key means permanent loss. Online services can be hacked or go bankrupt.</li>
+          <li><strong>Scams &amp; Fraud:</strong> Phishing emails, fake tokens, and Ponzi schemes are common. Verify everything.</li>
+          <li><strong>Regulatory Uncertainty:</strong> Laws vary by country and can change quickly. Tax reporting is required in many jurisdictions.</li>
+          <li><strong>No Implicit Endorsements:</strong> Mentions of Bitcoin, Ethereum, or any platform are for illustration only—LIFT does not recommend any specific asset.</li>
+        </ul>
+      </section>
+
+      <!-- Further Reading & Sources -->
+      <section class="further-reading">
+        <h2>Further Reading &amp; Sources</h2>
+        <ul>
+          <li><a href="https://www.investopedia.com/cryptocurrency-explained-4689832" target="_blank">“Cryptocurrency Explained” – Investopedia</a></li>
+          <li><a href="https://www.finra.org/rules-guidance/key-topics/crypto-assets" target="_blank">Crypto Assets Overview – FINRA</a></li>
+          <li><a href="https://www.irs.gov/filing/digital-assets" target="_blank">Digital Assets Tax Guidance – IRS</a></li>
+          <li><a href="https://www.gemini.com/cryptopedia/what-are-digital-assets" target="_blank">What Are Digital Assets? – Gemini Cryptopedia</a></li>
+          <li><a href="https://www.wellsfargo.com/investing-wealth/insights/market-commentary/digital-assets-basics" target="_blank">Understanding Digital Assets – Wells Fargo</a></li>
+        </ul>
+      </section>
+
+      <p class="note">This material is for educational purposes only and does not constitute financial, legal, or tax advice.</p>
+    </article>
+  </div>
+  <div class="container button-container" style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+    <a href="/module3-understanding-web3.html" class="cta-button" style="margin-right: 10px;">Next Module</a>
+    <a href="/resources.html" class="cta-button-secondary">Back to Resources</a>
+  </div>
+</main>
+
+<footer></footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 1: Introduction to DLT &amp; Blockchain - LIFT</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/images/site.webmanifest">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+<nav class="fixed w-full bg-gray-800 border-b border-gray-800" style="background: #333; color: #fff; padding: 1rem 0; border-bottom: #0779e4 3px solid;">
+    <div class="container mx-auto px-4 py-4" style="width: 80%; max-width: 1100px; margin: auto; overflow: hidden; padding: 0 20px;">
+        <div class="flex justify-between items-center" style="display: flex; justify-content: space-between; align-items: center;">
+            <!-- Logo -->
+            <a href="/" class="logo-link" style="display: flex; align-items: center; text-decoration: none; color: #fff;">
+                <img src="/images/lift-logo.png" alt="LIFT Logo" class="logo" style="height: 50px; margin-right: 10px;">
+                <span class="org-name" style="font-size: 1.5em; font-weight: bold;">LIFT</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8" style="display: flex; align-items: center;">
+                <ul style="padding: 0; list-style: none; margin: 0; display: flex;">
+                    <li style="padding: 0 15px;"><a href="/" style="color: #fff; text-decoration: none; text-transform: uppercase; font-size: 0.9em;">Home</a></li>
+                    <li style="padding: 0 15px;"><a href="/about" style="color: #fff; text-decoration: none; text-transform: uppercase; font-size: 0.9em;">About Us</a></li>
+                    <li style="padding: 0 15px;"><a href="/resources" style="color: #fff; text-decoration: none; text-transform: uppercase; font-size: 0.9em;">Educational Resources</a></li>
+                    <li style="padding: 0 15px;"><a href="/donate" style="color: #fff; text-decoration: none; text-transform: uppercase; font-size: 0.9em;">Donate</a></li>
+                    <li style="padding: 0 15px;"><a href="/contact" style="color: #fff; text-decoration: none; text-transform: uppercase; font-size: 0.9em;">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden p-2" id="mobile-menu-button" aria-label="Toggle menu" style="display: none; background: none; border: none; color: white; font-size: 2em; cursor: pointer;">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-gray-900" id="mobile-menu" style="display: none; background: #333;">
+            <div class="py-2 space-y-1" style="padding: 10px 0;">
+                <a href="/" style="display: block; color: #fff; text-decoration: none; padding: 10px; text-align: center;">Home</a>
+                <a href="/about" style="display: block; color: #fff; text-decoration: none; padding: 10px; text-align: center;">About Us</a>
+                <a href="/resources" style="display: block; color: #fff; text-decoration: none; padding: 10px; text-align: center;">Educational Resources</a>
+                <a href="/donate" style="display: block; color: #fff; text-decoration: none; padding: 10px; text-align: center;">Donate</a>
+                <a href="/contact" style="display: block; color: #fff; text-decoration: none; padding: 10px; text-align: center;">Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
+  <main>
+    <!-- Hero section with main title -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Module 1: Introduction to Distributed Ledger Technology (DLT) &amp; Blockchain</h1>
+        <p>This module covers the core principles of DLT, explaining what a blockchain is and how it functions to create a transparent and immutable record of transactions.</p>
+      </div>
+    </section>
+
+    <div class="container content-section">
+      <article>
+        <!-- Section 1: Understanding Ledgers & Distributed Ledgers -->
+        <section>
+          <h2>Understanding Ledgers &amp; Distributed Ledgers</h2>
+          <p>A <strong>ledger</strong> is a record of transactions or events, like an accounting book that tracks payments or exchanges. Traditionally, a single person or organization controls a ledger. In contrast, a <strong>distributed ledger</strong> is shared across many computers or participants, with each participant keeping their own synchronized copy of the ledger. Whenever a new entry is added, all copies update together. This improves transparency because everyone sees the same information, and it makes tampering (unauthorized changes) very difficult – if someone tries to alter one copy in secret, it will not match the others, and the network will reject the change.</p>
+          <p>For example, think of a Google Document that everyone in a group can view and edit in real time. With a shared Google Doc, all changes are visible to everyone immediately, and there’s one up-to-date version for all. In contrast, if you emailed a Word document back and forth, only one person could edit at a time and others might have outdated copies. The Google Doc approach is like a distributed ledger: there is one shared “live” version of the record that everyone trusts, instead of multiple conflicting copies.</p>
+          <p>The term <strong>Distributed Ledger Technology (DLT)</strong> refers to systems that use this shared ledger approach. <strong>Blockchain</strong> is one famous type of DLT – it’s a specific way of organizing a distributed ledger. In the next sections, we’ll look at how a blockchain works and what makes it unique.</p>
+        </section>
+
+        <!-- Section 2: How Blockchain Works -->
+        <section>
+          <h2>How Blockchain Works</h2>
+          <p>A blockchain is a type of distributed ledger that stores information in batches called <strong>blocks</strong>. Blocks are added one after another in chronological order, forming a continuous “chain” of blocks – this is where the name <em>blockchain</em> comes from. Each block contains a group of new transactions or data, and it also includes a reference (like a special digital fingerprint) linking it to the previous block in the chain. Because each block is linked to the one before it, all the blocks together create an unbroken, tamper-resistant record of data. Once a block is added to the chain, it is extremely hard to change its contents without altering every subsequent block (which the network would notice).</p>
+          <!-- SUGGESTION: Insert a diagram here illustrating the structure of a blockchain (blocks connected in a chain). Alt text: "Diagram showing blocks linked together in a chain" -->
+          <p>Instead of having a central authority decide which transactions to add to the ledger, blockchain networks rely on a **consensus** mechanism – meaning that the participants in the network must agree on each new block. There are different ways to achieve consensus. One common method is <strong>Proof of Work (PoW)</strong>, used by Bitcoin and others, which involves computers racing to solve a difficult math puzzle. The first computer to solve the puzzle earns the right to add the next block (and gets a reward), but this process uses a lot of electricity. Another method is <strong>Proof of Stake (PoS)</strong>, used by some newer blockchains, where people who own the cryptocurrency lock up some of their coins as a “stake.” A participant is then chosen (often at random, weighted by the size of their stake) to add the next block. If they add valid transactions, they earn a reward – but if they try to cheat with invalid data, they can lose their staked coins. Both PoW and PoS are designed to make cheating very hard or expensive, so that the network can trust the blocks that get added.</p>
+          <p>By requiring widespread agreement on each new block, the consensus process ensures everyone is synchronized and honest. This is how blockchain solves the <strong>double-spending problem</strong> in digital money. <em>Double spending</em> is when someone tries to spend the same money twice – something that could happen with digital files if not checked. Blockchain prevents this by having the network verify each transaction. Once a transaction is approved and recorded in a block, it’s considered final; the same digital coin can’t be spent again, because the whole network would see that it was already used and would reject the duplicate transaction.</p>
+          <p><em>Analogy:</em> Imagine a group of students keeping a class notebook where each page is a new block of records. The class must agree on what gets written on each new page before it’s added to the notebook – that’s like the consensus mechanism where everyone agrees on the next block. Once the page is filled out and added, it’s dated and “locked in,” and the class moves on to the next page. Over time, this forms a chain of pages (blocks) that no one can go back and secretly change, because everyone would notice if an earlier page was altered. This is how blockchain builds trust: by having a group agreement on every new page (block), the record becomes very hard to tamper with.</p>
+        </section>
+
+        <!-- Section 3: Real-World Significance of Blockchain -->
+        <section>
+          <h2>Real-World Significance of Blockchain</h2>
+          <p>Blockchains are interesting because they remove the need for a central middleman in many processes. In traditional systems, you often rely on a central authority (like a bank, a government office, or another trusted third party) to verify transactions or keep records accurate. With a blockchain, the network of users and its rules (consensus mechanisms) take over that job. This means two parties can make a direct transaction or share data without having to go through a single central hub – the decentralized network itself confirms and records the exchange. In theory, this can make certain transactions faster or more efficient, and it can reduce dependence on intermediaries, since everyone trusts the shared ledger’s version of events.</p>
+          <p>One example is in supply chain management. Companies can use a blockchain to track products as they move from the producer to the customer. Each time a product changes hands – say from a factory, to a shipper, to a warehouse, to a store – a record of that transfer can be added to a blockchain ledger. Because this ledger is shared, anyone authorized (like all the companies in that supply chain) can see the history of the product. This improves transparency: you can trace a product’s journey and know where it came from. It also adds security, because once these records are on the blockchain, they are very hard to alter secretly. For instance, if there’s a recall of a food item, a blockchain record could help quickly pinpoint which batch was affected and where it went, thanks to the permanent, transparent log of its path.</p>
+          <p>Another use case is digital identity. Instead of each institution keeping its own separate identity records that might not match, a blockchain-based identity system could allow individuals to have a single, cryptographically secure identity record that they control. You could prove your identity or credentials (for example, your age, or that you have a certain certificate) to different services by referencing the trusted blockchain record, without always relying on a central issuer each time. This kind of system can enhance privacy and give people more control, because only the necessary information needs to be shared and the record is difficult to forge or tamper with.</p>
+          <p>Blockchain technology is also being explored for cross-border payments and settlements. Today, sending money overseas usually involves multiple banks and can take days to finalize. With a blockchain, a transfer could potentially happen directly between two financial institutions on a shared ledger, with the transaction confirmed in a matter of minutes. The result could be lower fees and faster processing, because fewer intermediaries are involved and everyone is using the same verified record. Many banks and fintech companies have run pilot projects using blockchain networks for international payments to test these benefits.</p>
+          <p>The big advantages that blockchain aims to provide in such cases are <strong>transparency</strong> and <strong>immutability</strong>. All participants sharing a blockchain see the same data (transparency), and once data is verified and added, it becomes extremely difficult to change or delete (immutability). This means people can trust that the record is a truthful and untampered history of transactions. However, it’s important to remember these benefits come with trade-offs and limitations, which we’ll consider next.</p>
+        </section>
+
+        <!-- Section 4: Risks & Important Considerations (styled as a warning box) -->
+        <section class="important-note">
+          <h2>Risks &amp; Important Considerations</h2>
+          <ul>
+            <li><strong>Not a magical solution:</strong> Blockchain is not a cure-all for every problem. Using a blockchain doesn’t guarantee success – in some cases a normal database or simpler solution might work better and be more efficient.</li>
+            <li><strong>Scaling challenges:</strong> Many blockchains (especially early ones) can only handle a limited number of transactions per second. This makes them hard to scale up for very large or high-speed applications in their current form.</li>
+            <li><strong>Energy concerns:</strong> Some blockchain networks (particularly those using Proof of Work consensus) consume very large amounts of electricity. This raises environmental and cost concerns. (Newer methods like Proof of Stake are more energy-efficient, but energy use is still an important consideration.)</li>
+            <li><strong>Transaction delays:</strong> Blockchain transactions are not instant. It can take time (seconds, minutes, or longer, depending on the network) for a transaction to be confirmed and added to a block. This delay means blockchains may not be ideal for applications that need split-second processing without upgrades.</li>
+            <li><strong>Permanent records (immutability):</strong> The flip side of having an unchangeable ledger is that mistakes or incorrect data become very hard to fix. If someone loses access to their account or if incorrect information is recorded, there isn’t a simple “undo” or delete button on a public blockchain. This permanence requires users to be very careful and certain before recording transactions.</li>
+            <li><strong>Beware of hype:</strong> There are many claims that blockchain will “revolutionize” or disrupt every industry. In reality, the technology is still developing, and not every project succeeds. It’s important to approach such claims with caution – blockchain can be innovative, but it’s not guaranteed to work for every scenario, and it often faces practical challenges when implemented.</li>
+          </ul>
+        </section>
+
+        <!-- Key Takeaways section (styled as a highlight box) -->
+        <section class="key-takeaways">
+          <h2>Key Takeaways</h2>
+          <ul>
+            <li>A ledger is a record of transactions. A distributed ledger is shared by many participants simultaneously, which makes the record more transparent and harder to tamper with.</li>
+            <li>Blockchain is a type of distributed ledger that organizes data into blocks linked chronologically in a chain, creating an immutable (unchangeable) record of information.</li>
+            <li>Blockchain networks use consensus mechanisms (like Proof of Work or Proof of Stake) to agree on new transactions. This allows the network to verify things (like preventing double-spending of digital money) without needing a central authority.</li>
+            <li>By removing the need for a central middleman, blockchains enable direct transactions and data sharing in various industries (for example, tracking items in a supply chain or managing digital identities) with greater transparency and trust.</li>
+            <li>Blockchain technology also has important limitations — it can be slow or resource-intensive, and it isn’t the right solution for every problem. It’s a promising tool, but not a magical fix-all.</li>
+          </ul>
+        </section>
+
+        <!-- Further Reading & Sources -->
+        <div>
+          <div class="further-reading">
+            <h2>Further Reading &amp; Sources:</h2>
+            <ul>
+              <li>(Article) <a href="https://www.ibm.com/topics/what-is-blockchain" target="_blank" rel="noopener noreferrer">What is Blockchain Technology?</a> - IBM</li>
+              <li>(Article) <a href="https://www.investopedia.com/terms/d/distributed-ledger-technology-dlt.asp" target="_blank" rel="noopener noreferrer">Distributed Ledger Technology (DLT)</a> - Investopedia</li>
+              <li>(Article) <a href="https://www.investopedia.com/terms/b/blockchain.asp" target="_blank" rel="noopener noreferrer">Blockchain</a> - Investopedia</li>
+              <li>(Interactive Demo) <a href="https://andersbrownworth.com/blockchain/" target="_blank" rel="noopener noreferrer">Blockchain 101: A Visual Demo</a> - Anders Brownworth</li>
+              <li>(Article) <a href="https://mitsloan.mit.edu/ideas-made-to-matter/blockchain-explained" target="_blank" rel="noopener noreferrer">Blockchain, explained</a> - MIT Sloan</li>
+            </ul>
+          </div>
+          <p class="note">This content is for educational purposes only and does not constitute financial, legal, or tax advice.</p>
+        </div>
+      </article>
+    </div>
+    <div class="container button-container" style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+      <a href="/module2-digital-assets.html" class="cta-button" style="margin-right: 10px;">Next Module</a>
+      <a href="/resources.html" class="cta-button-secondary">Back to Resources</a>
+    </div>
+  </main>
+  <footer></footer>
+  <script src="/js/main.js"></script>
+</body>
