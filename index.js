@@ -57,6 +57,10 @@ app.get('/disclaimer', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'disclaimer.html'));
 });
 
+app.get('/governance', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'governance.html'));
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
     res.json({
