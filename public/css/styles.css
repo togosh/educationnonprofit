@@ -182,6 +182,15 @@ header a:hover, header a.active {
     margin: 0 auto; /* Center the image if max-width is less than container width */
 }
 
+.blockchain-diagram-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
 /* Content Sections */
 .intro-section, .what-we-do, .call-to-support {
     padding: 40px 0;
