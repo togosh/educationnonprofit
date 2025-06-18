@@ -13,8 +13,8 @@
     margin-top: 0 !important;
   }
 }
-/* LIFT Nonprofit Website Styles */
 
+/* LIFT Nonprofit Website Styles */
 *,
 *::before,
 *::after {
@@ -29,8 +29,8 @@ body, html {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    width: 100%; /* Added to ensure full width */
-    overflow-x: hidden; /* Added to prevent horizontal scroll */
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .container {
@@ -49,10 +49,12 @@ header {
     border-bottom: #0779e4 3px solid;
 }
 
-header nav .nav-container {
+/* This is the container for the logo, menu, and button */
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* Crucial for positioning the mobile button */
 }
 
 .logo-link {
@@ -87,30 +89,31 @@ header nav .nav-container {
     font-weight: bold;
 }
 
-header ul {
+/* Desktop menu is visible by default */
+.desktop-menu ul {
     padding: 0;
     list-style: none;
     margin: 0;
     display: flex;
 }
 
-header li {
-    display: inline;
+.desktop-menu li {
     padding: 0 15px;
 }
 
-header a {
+.desktop-menu a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 0.9em;
 }
 
-header a:hover, header a.active {
+.desktop-menu a:hover, .desktop-menu a.active {
     color: #0779e4;
     font-weight: bold;
 }
 
+/* Mobile menu button is hidden by default */
 .mobile-menu-button {
     display: none;
     background: none;
@@ -185,16 +188,16 @@ header a:hover, header a.active {
 /* Banner for static pages */
 .banner-container {
     width: 100%;
-    text-align: center; /* Center the image if it's smaller than the container */
-    padding: 20px 0; /* Add some padding above and below */
-    background-color: #fff; /* Optional: set a background color if needed */
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
 }
 
 .page-banner-image {
-    max-width: 100%; /* Make image responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove extra space below image */
-    margin: 0 auto; /* Center the image if max-width is less than container width */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .blockchain-diagram-image {
@@ -296,15 +299,15 @@ section h2 {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
-    display: flex; /* Added for centering */
-    flex-direction: column; /* Added for centering */
-    align-items: center; /* Added for centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .resource-item img {
-    max-width: 100%; /* Ensure image scales down */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 15px; /* Add some space below the image */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
 }
 
 .resource-item:hover {
@@ -427,7 +430,7 @@ section h2 {
 }
 
 .key-takeaways ul li strong {
-  color: #0779e4; /* Highlight color for key terms */
+  color: #0779e4;
 }
 
 .disclaimer-text {
@@ -475,39 +478,18 @@ footer a:hover {
 
 /* Responsive Design */
 @media(max-width: 768px) {
-    header nav .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        position: relative;
-    }
-    
-    .logo-link { 
-        margin-bottom: 10px; 
-    }
-    
-    header ul {
+    /* Hide the desktop menu on mobile */
+    .desktop-menu {
         display: none;
-        flex-direction: column;
-        width: 100%;
-        background: #333;
     }
     
-    header ul.active {
-        display: flex;
-    }
-    
-    header li {
-        display: block;
-        text-align: center;
-        padding: 10px 0;
-        border-top: 1px solid #444;
-    }
-    
+    /* Show the mobile menu button and position it */
     .mobile-menu-button {
-        display: block;
+        display: block; /* Make it visible on mobile */
         position: absolute;
-        top: 10px;
-        right: 20px;
+        top: 50%;
+        right: 0; /* Position relative to the .nav-container */
+        transform: translateY(-50%);
     }
 
     .focus-areas {
@@ -598,7 +580,7 @@ footer a:hover {
 
 .team-member h4 {
     margin-bottom: 0.5rem;
-    color: #333; /* Or your preferred heading color */
+    color: #333;
 }
 
 .team-member .bio {

@@ -1,6 +1,6 @@
 <nav class="fixed w-full bg-gray-800 border-b border-gray-800" style="background: #333; color: #fff; padding: 1rem 0;">
     <div class="container mx-auto px-4 py-4" style="width: 80%; max-width: 1100px; margin: auto; overflow: hidden; padding: 0 20px;">
-        <div class="flex justify-between items-center" style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center;">
             <!-- Logo -->
             <a href="/" class="logo-link" style="display: flex; align-items: center; text-decoration: none; color: #fff;">
                 <img src="/images/lift-logo.png" alt="LIFT Logo" class="logo" style="height: 50px; margin-right: 10px;">
@@ -8,8 +8,8 @@
             </a>
             
             <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8" style="align-items: center;">
-                <ul style="padding: 0; list-style: none; margin: 0;">
+            <div class="desktop-menu">
+                <ul style="padding: 0; list-style: none; margin: 0; display: flex; align-items: center;">
                     <li style="padding: 0 15px;"><a href="/" style="color: #fff; text-decoration: none; text-transform: uppercase; font-size: 0.9em;">Home</a></li>
                     <li style="padding: 0 15px;"><a href="/about" style="color: #fff; text-decoration: none; text-transform: uppercase; font-size: 0.9em;">About Us</a></li>
                     <li style="padding: 0 15px;"><a href="/resources" style="color: #fff; text-decoration: none; text-transform: uppercase; font-size: 0.9em;">Educational Resources</a></li>
@@ -19,7 +19,7 @@
             </div>
             
             <!-- Mobile Menu Button -->
-            <button class="md:hidden p-2" id="mobile-menu-button" aria-label="Toggle menu" style="background: none; border: none; color: white; font-size: 2em; cursor: pointer;">
+            <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Toggle menu">
                 <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -27,7 +27,7 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div class="hidden md:hidden bg-gray-900" id="mobile-menu" style="display: none; background: #333;">
+        <div id="mobile-menu" style="display: none; background: #333;">
             <div class="py-2 space-y-1" style="padding: 10px 0;">
                 <a href="/" class="mobile-link" style="display: block; color: #fff; text-decoration: none; padding: 10px; text-align: center; border-bottom: 1px solid #fff;">Home</a>
                 <a href="/about" class="mobile-link" style="display: block; color: #fff; text-decoration: none; padding: 10px; text-align: center; border-bottom: 1px solid #fff;">About Us</a>
