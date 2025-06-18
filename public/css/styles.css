@@ -561,3 +561,23 @@ footer a:hover {
     border-bottom: 2px solid #0779e4;
     padding-bottom: 10px;
 }
+
+.team-member {
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.team-member:last-of-type {
+    border-bottom: none;
+}
+
+.team-member h4 {
+    margin-bottom: 0.5rem;
+    color: #333; /* Or your preferred heading color */
+}
+
+.team-member .bio {
+    margin-left: 0;
+    line-height: 1.6;
+}
