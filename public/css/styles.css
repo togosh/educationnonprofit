@@ -587,3 +587,35 @@ footer a:hover {
     margin-left: 0;
     line-height: 1.6;
 }
+
+/* STYLES FOR UPDATES PAGE */
+.update-post {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.update-post:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.update-post h2 a {
+    text-decoration: none;
+    color: #0779e4;
+}
+
+.update-post h2 a:hover {
+    text-decoration: underline;
+}
+
+.post-meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 1rem;
+}
+
+.update-post-full h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5rem;
+}
