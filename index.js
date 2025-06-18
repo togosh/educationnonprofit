@@ -61,6 +61,10 @@ app.get('/governance', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'governance.html'));
 });
 
+app.get('/privacy-policy', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'privacy-policy.html'));
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
     res.json({
