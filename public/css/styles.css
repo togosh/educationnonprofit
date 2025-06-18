@@ -1,3 +1,18 @@
+/* --- Button Container Responsive Spacing for Module Navigation --- */
+@media (max-width: 600px) {
+  .button-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .button-container .cta-button {
+    margin-right: 0 !important;
+    margin-bottom: 12px !important;
+  }
+  .button-container .cta-button-secondary {
+    margin-top: 0 !important;
+  }
+}
 /* LIFT Nonprofit Website Styles */
 
 *,
