@@ -402,38 +402,21 @@ section h2 {
     border: 1px solid #f5c6cb;
 }
 
-/* Error Pages */
-.error-content {
-    text-align: center;
-    padding: 40px 20px;
+.key-takeaways ul li strong {
+  color: #0779e4; /* Highlight color for key terms */
 }
 
-.error-content h2 {
-    color: #cc0000;
-    margin-bottom: 20px;
+.disclaimer-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
 }
 
-.error-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
-
-.error-content ul li {
-    margin: 10px 0;
-}
-
-.error-content ul li a {
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.error-content ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
+/* --- Footer --- */
 footer {
     background: #333;
     color: #bbb;
