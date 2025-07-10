@@ -60,6 +60,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    document.getElementById('copy-button').addEventListener('click', function() {
+            const address = document.getElementById('crypto-address').innerText;
+            navigator.clipboard.writeText(address).then(function() {
+                const successMessage = document.getElementById('copy-success-message');
+                successMessage.style.display = 'block';
+                setTimeout(function() {
+                    successMessage.style.display = 'none';
+                }, 2000);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        });
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

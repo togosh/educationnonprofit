@@ -31,23 +31,53 @@
                 <p>Together, we can empower our communities with the knowledge needed for the digital future.</p>
 
                 <h2>How to Donate</h2>
-                <p>LIFT is applying for 501(c)(3) nonprofit status. Once approved, donations will be tax-deductible to the fullest extent allowed by law. We are currently setting up our donation processing systems.</p>
+                <p>LIFT is applying for 501(c)(3) nonprofit status. Once approved, donations will be tax-deductible to the fullest extent allowed by law.</p>
                 <p>All contributions will be used to support LIFT's tax-exempt educational programs and operations.</p>
                 <p>No goods or services will be provided in exchange for donations.</p>
 
                 <div class="donation-method">
-                    <h3>Cryptocurrency Donations (Details Coming Soon)</h3>
-                    <p>We will be accepting donations in various cryptocurrencies. Please check back for wallet addresses once our organizational accounts are fully established.</p>
-                    <!--<p><em>Example Placeholder (DO NOT USE YET):</em></p>-->
-                    <!-- <p><strong>Bitcoin (BTC):</strong> [NPO_BTC_ADDRESS_HERE]</p> -->
-                    <!-- <p><strong>Ethereum (ETH) & ERC20s:</strong> [NPO_ETH_ADDRESS_HERE]</p> -->
-                    <!-- <p><strong>PulseChain (PLS) & PRC20s:</strong> [NPO_PLS_ADDRESS_HERE]</p> -->
-                    <p class="important-note">Please ensure you are sending to the correct address for the intended network. LIFT is not responsible for funds sent to incorrect addresses.</p>
+                    <h3>Cryptocurrency Donations</h3>
+                    <p>We accept contributions on the Ethereum Network. You can send ETH or any ERC-20 compatible token to our official, self-custodied organizational address below.</p>
+                     
+                    <div class="wallet-address-box">
+                        <p><strong>Official LIFT Donation Address (Ethereum Network):</strong></p>
+                        <p id="crypto-address" class="crypto-address-text">0x6ACf95184852380944a42673FfF99E47A53EF881</p>
+                        <button id="copy-button" class="cta-button-secondary">Copy Address</button>
+                        <div id="copy-success-message" style="display:none; color: green; margin-top: 10px;">Address Copied!</div>
+                    </div>
+
+                    <div class="important-note" style="margin-top:20px;">
+                        <p><strong>CRITICAL:</strong></p>
+                        <ul>
+                            <li>Only send ETH or ERC-20 tokens to this address via the Ethereum Mainnet. Do not send assets from other blockchains (like Bitcoin).</li>
+                            <li>Sending incompatible assets may result in the permanent loss of your donation.</li>
+                            <li>Transactions are irreversible. Please double-check the address before sending.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="donation-method">
-                    <h3>Fiat Donations (Details Coming Soon via Bank or Payment Processor)</h3>
-                    <p>Information on how to donate via traditional currency will be available once our nonprofit bank account is operational.</p>
+                    <section id="fiat-donate">
+                        <h2>Donate by ACH or Wire&nbsp;(USD)</h2>
+
+                        <p>
+                            For security we don’t publish our bank numbers online.  
+                            <strong>Email: <a href="mailto:liftfintech@gmail.com">liftfintech@gmail.com</a></strong>  
+                            and we’ll send you a one-time, secure Mercury payment link that lets you pay
+                            by <em>instant ACH</em> (free) or <em>Fedwire</em> (same-day).
+                        </p>
+
+                        <ul>
+                            <li>The link is unique to your gift and expires after payment.</li>
+                            <li>Please include your name (or company name) and the USD amount you wish to donate.</li>
+                            <li>You’ll receive an emailed PDF receipt as soon as the transfer settles.</li>
+                        </ul>
+
+                        <p class="important-note">
+                            <em>Always verify wiring instructions.
+                            LIFT will never email last-minute changes.</em>
+                        </p>
+                    </section>
                 </div>
 
                 <p class="thank-you-note">Thank you for considering a donation to support digital literacy in Texas!</p>
@@ -74,6 +104,21 @@
     </footer>
 
     <script src="/js/main.js"></script>
-    
+    <style>
+        .wallet-address-box {
+            background-color: #f0f8ff;
+            border: 1px solid #add8e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .crypto-address-text {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1em;
+            word-wrap: break-word;
+            margin-bottom: 15px;
+        }
+    </style>
 </body>
 </html>
